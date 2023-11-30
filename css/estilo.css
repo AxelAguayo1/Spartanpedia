@@ -1,0 +1,314 @@
+/* Estilos de reseteo */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+  margin: 20px;
+  padding: 20px;
+  background-image: url("./img/anilo.2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos del título */
+.Titulo {
+  background-image: url("./img/bCK-white.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-size: cover;
+background-attachment: fixed;
+}
+
+.title__text {
+  width: min-content;
+  z-index: 2;
+}
+
+.title__text h1 {
+  font-family: 'Halo', sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Estilos de la descripción */
+.Descripcion {
+  background-color: black;
+  text-align: center;
+  font-style: italic;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Estilos de la barra de navegación */
+nav .header-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: center;
+}
+
+.header-nav li {
+  margin: 0 10px;
+}
+
+.button {
+  --color: #0038a9;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+
+
+/* Estilos del contenedor principal */
+.container {
+  min-height: 100vh;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Estilos de la descripción principal */
+.for-description {
+  display: block;
+  padding: 1.5rem 0;
+}
+
+.principal-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1.5rem;
+  max-width: 1025px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.principal-description__title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ede4e4;
+}
+
+.principal-description__content p {
+  text-align: center;
+  font-size: 0.9rem;
+  text-indent: 2rem;
+  color: #ede4e4;
+}
+
+/* Estilos del contenedor 2 */
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Estilos de las imágenes */
+.imagen-1 {
+  border: solid black;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.imagen-1:hover {
+  transform: scale(1.1);
+}
+
+/* Sección de todo el contenido de video */
+.video-container {
+  position: relative;
+  width: 40%;
+  padding-bottom: 20%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Estilos de la sección de video */
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  color: #ede4e4;
+  margin-bottom: 20px;
+}
+
+.video-title {
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.video-title h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.video-description {
+  margin-top: 20px;
+  padding: 1.5rem;
+  max-width: 1050px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-container iframe:hover {
+  transform: scale(1.2);
+}
+
+/* Estilos del botón de inicio de sesión */
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  background: none;
+  border: none;
+  padding: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .container-2 {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .imagen-1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .Titulo {
+    padding: 10px; 
+  }
+
+  .title__text h1 {
+    font-size: 2rem; 
+  }
+
+  .header-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-nav li {
+    margin: 5px 0;
+  }
+
+  .header-nav li button {
+    padding: 0.8rem 1rem;
+    margin-right: 5px;
+    width: 100%; /* Ajusta el ancho al 100% para ocupar todo el contenedor */
+  }
+
+  .video-container {
+    width: 100%; /* Ajusta el ancho del contenedor de video en dispositivos móviles */
+    padding-bottom: 56.25%; /* Puedes ajustar este valor según tus necesidades */
+  }
+
+  footer {
+    padding: 10px; 
+  }
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer p {
+  margin: 0;
+}
